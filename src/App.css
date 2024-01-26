@@ -5,6 +5,9 @@ body {
   background-color: black;
   color: white;
   font-family: "poppins";
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 }
 .nav {
   background: #00040f;
@@ -112,10 +115,13 @@ body {
     #33bbcf 100%
   );
 }
-
-::-webkit-scrollbar {
-  display: none;
+.gyms {
+  background-color: rgba(149, 146, 146, 0.664);
 }
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
 
 .sheild {
   border-radius: 20px;
@@ -195,4 +201,7 @@ body {
 }
 .line {
   background: #3f3e45;
+}
+.photos{
+  opacity: 10;
 }

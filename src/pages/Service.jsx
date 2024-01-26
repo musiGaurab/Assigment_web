@@ -1,30 +1,77 @@
-import React from "react";
-import air from "../assets/air.png";
-import coinbase from "../assets/coinbase.png";
-import binance from "../assets/binance.png";
-import drop from "../assets/drop.png";
+// FormComponent.js
+import { useState } from "react";
+
 const Service = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+  };
+
   return (
-    <>
-      <div className="mt-20 flex flex-col items-center justify-center gap-20">
-        <div className="w-screen flex items-center justify-evenly p-4">
-          <img className="w-[10%]" src={air} alt="airbnb" />
-          <img className="w-[10%]" src={binance} alt="binance" />
-          <img className="w-[10%]" src={coinbase} alt="coinbase" />
-          <img className="w-[10%]" src={drop} alt="dropbox" />
+    <div className="flex justify-center items-center h-screen">
+      <form className="w-full max-w-3xl p-8 rounded shadow-md">
+        <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-sm font-bold mb-2">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-2 border border-gray-300 rounded"
+          />
         </div>
-        <div className="p-10 flex justify-around items-center  service">
-          <div className="flex flex-col gap-5">
-            <h1 className="font-bold text-5xl">Let’s try our service now!</h1>
-            <p className="w-[55%] discount">
-              Everything you need to accept card payments and grow your business
-              anywhere on the planet.
-            </p>
-          </div>
-          <button className="text-black start p-2">Get started</button>
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-sm font-bold mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-2 border border-gray-300 rounded"
+          />
         </div>
-      </div>
-    </>
+        <div className="mb-6">
+          <label htmlFor="message" className="block text-sm font-bold mb-2">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full p-2 border border-gray-300 rounded resize-none"
+            rows="4"
+          ></textarea>
+        </div>
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

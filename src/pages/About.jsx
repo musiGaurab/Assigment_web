@@ -2,28 +2,29 @@ import React from "react";
 import star from "../assets/Star.svg";
 import shield from "../assets/shield.svg";
 import send from "../assets/Send.svg";
+import gyms4 from "../assets/gym4.webp";
 const About = () => {
   return (
     <>
-      <div className="m-20 p-[10px] flex justify-center items-center gap-10">
+      <div className="mt-20 p-[10px] flex justify-center items-center gap-10 max-w-6xl mx-auto">
         <div className="flex flex-col w-[50%] justify-center gap-10">
           <div className="flex flex-col gap-5">
-            <span className="text-5xl font-bold">You do the business,</span>
-            <span className="text-5xl font-bold">we’ll handle the money.</span>
+            <span className="text-5xl font-bold">About Fit Gurukul</span>
           </div>
           <p className="w-[80%] discount">
-            With the right credit card, you can improve your financial life by
-            building credit, earning rewards and saving money. But with hundreds
-            of credit cards on the market.
+            Experience fitness excellence with us. Our gym combines cutting-edge
+            equipment, personalized training, and a motivating atmosphere to
+            elevate your fitness journey. Join our community and unlock your
+            potential with tailored workouts and expert guidance, making every
+            step towards wellness rewarding and enjoyable
           </p>
           <div>
-            <button className="start p-2 rounded text-black">
-              Get started
-            </button>
+            <button className="gyms p-2 rounded text-white">Get started</button>
           </div>
         </div>
         <div className="flex w-[40%] flex-col gap-5">
-          <div className="flex items-center gap-5">
+          <img src={gyms4} alt="gyms" className="w-[80%]" />
+          {/* <div className="flex items-center gap-5">
             <img src={star} alt="star" />
             <div className="flex flex-col gap-3">
               <h1>Rewards</h1>
@@ -52,7 +53,7 @@ const About = () => {
                 interest charges.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

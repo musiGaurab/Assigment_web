@@ -4,17 +4,20 @@ import media from "../assets/media.png";
 const Footer = () => {
   return (
     <>
-      <div className="footer p-3 mt-10 flex flex-col items-center justify-center gap-7">
+      <div className="footer p-3 mt-10 flex flex-col items-center justify-center gap-7 max-w-6xl m-auto">
         <div className="flex items-center justify-center">
           <div className="flex flex-col gap-10">
             <div className="flex gap-1 items-center">
-              <img src={logo} alt="logo" />
-              <h1 className="font-bold text-4xl">
-                Hoo<span className="logo">Bank</span>
-              </h1>
+              {/* <img src={logo} alt="logo" /> */}
+              <a className="flex items-center gap-0 text-[40px]" href="/">
+                {/* <img src={logo} alt="logo" /> */}
+                Ft<span className="text-red-600 text-[20px]">Gurukul</span>
+              </a>
             </div>
-            <p className="font-[300] w-[65%]">
-              A new way to make the payments easy, reliable and secure.
+            <p className="font-[300] w-[65%] discount">
+              Experience fitness excellence with us. Our gym combines
+              cutting-edge equipment, personalized training, and a motivating
+              atmosphere to elevate your fitness journey.
             </p>
           </div>
           <div className="flex items-start gap-20">

@@ -1,8 +1,9 @@
 import "./App.css";
 import About from "./pages/About";
+import Coach from "./pages/Coach";
 import Footer from "./pages/Footer";
 import Home from "./pages/Home";
-import Method from "./pages/Method";
+// import Method from "./pages/Method";
 import Nav from "./pages/Nav";
 import Service from "./pages/Service";
 import Testo from "./pages/Testo";
@@ -16,7 +17,7 @@ function App() {
         <Home />
         <About />
         <Trans />
-        <Method />
+        <Coach />
         <Testo />
         <Service />
         <Footer />
